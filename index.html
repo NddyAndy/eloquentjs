@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EloquentJs</title>
+</head>
+<body>
+    
+    <script>
+        //Looping a triangle
+        function loopingATri() {
+            var size = 8;
+            var hash = '';
+            for (var i =0; i < size; i++) {
+                hash += '#';
+                console.log(hash);
+            }
+        }
+        // LoopingATri();
+       
+
+       // FizzBuzz
+        function fizzBuzz(){
+            for (let i = 1; i < 100; i++) {
+                if((i % 3 == 0) && (i % 5 == 0)) {
+                    console.log('Fizzbuzz');
+                }else if ( i% 3 == 0) {
+                   
+                    console.log('Fizz');
+                }else if(i % 5 == 0) {
+                
+                    console.log('Buzz');
+                }else {
+                    console.log(i);
+                }
+                
+            }
+        }
+        // fizzBuzz();
+
+
+        // Chess board
+        function chessBoard() {
+            size = 8;
+            board = '';
+            for (var y = 0; y < size; y++) {
+                for(var x = 0; x < size; x++) {
+                    if ((x + y)% 2 !== 0) {
+                        board += ' ';
+                    } else {
+                        board += '#';
+                    }
+                } 
+                board += '\n';
+            }
+            console.log(board);
+
+        }
+
+        // chessBoard();
+
+
+        // function findSolution ( target ) {
+        //     function find ( current , history ) {
+        //         if ( current == target )
+        //             return history ;
+        //         else if ( current > target )
+        //             return null ;
+        //         else
+        //             return find ( current + 5, "(" + history + " + 5) ") ||
+        //             find ( current * 3 , "(" + history + " * 3) ") ;
+        //         }
+        //         return find (1 , "1") ;
+        //     }
+
+        //     console . log ( findSolution (24) );
+
+        //Recursion
+
+        function isEven(n){
+            n = Math.abs(n);
+            if (n == 0)
+              return true;
+            else if(n == 1)
+              return false;
+            else
+              return isEven(n - 2);
+        }
+
+        // console.log(isEven(-50));
+
+        //Minimum
+
+        function min(no1, no2) {
+            return no1 < no2 ? no1 : no2;
+        }
+
+        console.log(min(4, 5));
+
+        // Bean counting 
+        function countChars(str, char) {
+            var newStr = '';
+            for(var i=0; i < str.length; i++) {
+               if(str[i] == char) {
+                   newStr += str[i];
+               }
+            }
+            return newStr.length;
+        }
+
+        // console.log(countChars('bubble', 'b'));
+
+
+
+
+    </script>
+</body>
+</html>
