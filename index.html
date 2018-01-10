@@ -83,7 +83,7 @@
             return no1 < no2 ? no1 : no2;
         }
 
-        console.log(min(4, 5));
+        // console.log(min(4, 5));
 
         // Bean counting 
         function countChars(str, char) {
@@ -98,7 +98,53 @@
 
         // console.log(countChars('bubble', 'b'));
 
+        //CHAPTER 3
 
+        //The sum of a range
+
+        function range(min, max, step){
+            var arr = [];
+            if(step){
+                if(min < max && step > 0) {
+                    for(var i = min; i <= max; i = i + step ) {
+                    arr.push(i);
+                    }
+                }else if (min < max && step < 0){
+                    var i = max;
+                    while(i >= min){
+                        arr.push(i);
+                        
+                        i--;
+                    }
+                }
+
+                
+            }else{
+                if(min < max) {
+                    for(var i = min; i <= max; i++  ) {
+                    arr.push(i);
+                }
+                }else {
+                    return 'error';
+                }
+                
+            }
+         
+            
+            
+            return arr;
+        }
+        function sumArr(arr) {
+            var num = 0;
+            for(var i = 0; i < arr.length; i++) {
+                num += arr[i];
+            }
+            return num;
+        }
+        var func = range(1,10, -1 );
+        console.log(func);
+        console.log(sumArr(func));
+        
         
     </script>
 </body>
